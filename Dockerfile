@@ -1,6 +1,7 @@
 FROM tensorflow/tensorflow:2.3.0
 
-RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main" && apt-get update && apt-get install -y \
+RUN apt update && apt-get install -y software-properties-common  && apt-get update && \
+  add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security main" && apt-get update && apt-get install -y \
   # developer tools
   build-essential \
   curl \
